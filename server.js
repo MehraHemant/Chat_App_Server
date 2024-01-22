@@ -25,7 +25,7 @@ app.use(errorHandler);
 
 const port = 8080;
 const server = http.createServer(app);
-const io = new Server(server, { pingTimeout: 60000, cors: { origin: 'http://localhost:5173' } });
+const io = new Server(server, { pingTimeout: 60000, cors: { origin: 'https://chat-app-pi-lime.vercel.app/' } });
 //socket io
 io.on('connection', socket => {
     console.log('A new user has connected', socket.id)
